@@ -20,7 +20,7 @@ class PaymentController(
         paymentService.create(request)
     }
 
-    @PostMapping
+    @PostMapping("/search")
     @ResponseStatus(HttpStatus.OK)
     fun search(): List<SearchPaymentResponseDTO>{
         return paymentService.search()

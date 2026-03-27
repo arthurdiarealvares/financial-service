@@ -20,7 +20,7 @@ class OrderController(
         orderService.create(request)
     }
 
-    @PostMapping
+    @PostMapping("/search")
     @ResponseStatus(HttpStatus.OK)
     fun search(): List<SearchOrderResponseDTO>{
         return orderService.search()

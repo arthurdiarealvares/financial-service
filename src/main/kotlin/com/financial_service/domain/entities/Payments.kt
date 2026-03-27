@@ -7,12 +7,11 @@ import jakarta.persistence.Enumerated
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import jakarta.persistence.Table
 
 @Entity
 data class Payments(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long,
+    val id: Long?,
     val externalId: String,
     val paidValue: Double,
     @Enumerated(EnumType.STRING) val currency: Currency

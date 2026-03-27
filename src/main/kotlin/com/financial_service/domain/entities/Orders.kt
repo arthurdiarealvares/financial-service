@@ -13,7 +13,7 @@ import java.time.LocalDateTime
 @Entity
 data class Orders(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long,
+    val id: Long?,
     val externalId: String,
     val productId: String,
     @Enumerated(EnumType.STRING) val originSystem: OriginSystem,
