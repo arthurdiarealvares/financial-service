@@ -35,6 +35,9 @@ dependencies {
 	// DB
 	implementation("org.flywaydb:flyway-core:12.1.1")
 	implementation("org.postgresql:postgresql:42.7.10")
+
+	// Logging
+	implementation("org.slf4j:slf4j-api:2.0.17")
 }
 
 kotlin {

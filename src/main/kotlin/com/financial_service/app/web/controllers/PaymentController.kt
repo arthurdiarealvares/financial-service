@@ -1,7 +1,7 @@
 package com.financial_service.app.web.controllers
 
 import com.financial_service.app.web.dtos.request.CreatePaymentRequestDTO
-import com.financial_service.app.web.dtos.response.SearchPaymentResponseDTO
+import com.financial_service.domain.entities.Payments
 import com.financial_service.domain.services.PaymentService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
@@ -22,7 +22,7 @@ class PaymentController(
 
     @PostMapping("/search")
     @ResponseStatus(HttpStatus.OK)
-    fun search(): List<SearchPaymentResponseDTO>{
+    fun search(): List<Payments>{
         return paymentService.search()
     }
 
